@@ -1,0 +1,32 @@
+.wrapper .main_container{
+  width: (100% - 200px);
+  margin-top: 70px;
+  margin-left: 200px;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .main_container h1{
+  font-size: 1.5rem;
+  color: white;
+
+}
+
+.wrapper .main_container .dashhitem{
+  background: #000000;
+  height: 60vh;
+   
+}
+
+.info-box-content {
+  color: #f0e9e9; 
+}
+
+ 
+ 
+.info-box {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;    
+    
+}

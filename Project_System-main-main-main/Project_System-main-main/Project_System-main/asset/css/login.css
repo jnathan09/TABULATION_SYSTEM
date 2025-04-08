@@ -1,0 +1,60 @@
+/* Making the login-box background transparent */
+ 
+.login-box {
+  background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  height: 370px;
+  width: 350px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 220px;
+   
+}
+
+/* Adding transparency to the card */
+.card {
+  background-color: rgba(255, 255, 255, 0.7); /* Light background with some transparency */
+  border-radius: 10px;
+  height: 370px;
+  width: 350px;
+
+
+
+}
+
+/* Input fields with some transparency */
+.form-control {
+  background-color: rgba(255, 255, 255, 0.6); /* Transparent white background */
+  color: #333; /* Dark text for better readability */
+  border: 1px solid rgba(0, 0, 0, 0.2); /* Slightly transparent border */
+  height: 30px;
+  width: 300px;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+/* Button with transparency */
+.btn-bg {
+  height: 40px;
+  border: none;
+  box-shadow: none;
+  width: 100px;
+  margin-top: 12px;
+  color: white;
+  border-radius: 5px;
+
+}
+
+.btn-bg:hover {
+  background-color:#47663B;
+
+}
+
+/* For the background image, if any */
+
+
+
+ 
