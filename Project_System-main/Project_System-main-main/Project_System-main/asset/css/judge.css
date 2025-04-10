@@ -18,3 +18,33 @@
   padding: 15px;
    
 }
+
+/* Default sidebar width */
+.wrapper .sidebar {
+  width: 200px;
+  transition: all 0s ease;
+}
+
+/* Collapsed state */
+.wrapper.collapsed .sidebar {
+  width: 90px;
+}
+
+.wrapper.collapsed .sidebar .title {
+  display: none;
+}
+
+.wrapper.collapsed .sidebar .icon {
+  text-align: center;
+  width: 50%;
+}
+
+/* Optional: adjust main container when collapsed */
+.wrapper.collapsed .main_container {
+  margin-left: 100px;
+}
+
+.main_container {
+  margin-left: 250px;
+  transition: all 1s ease;
+}

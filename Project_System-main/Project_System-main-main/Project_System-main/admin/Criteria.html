@@ -11,15 +11,15 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
     <script>
-        $(document).ready(function () {
-            $(".hamburger").click(function () {
-                $(".wrapper").toggleClass("open"); // Use 'open' instead of 'collapse'
-            });
-        });
-    </script>
-    <style type="text/css">
-        /* Your custom styles here, if any */
-    </style>
+        document.addEventListener("DOMContentLoaded", function () {
+          const hamburger = document.querySelector(".hamburger");
+          const wrapper = document.querySelector(".wrapper");
+      
+          hamburger.addEventListener("click", function () {
+            wrapper.classList.toggle("collapsed");
+          });
+        });    
+       </script>
 </head>
 <body>
 
@@ -52,7 +52,7 @@
                 <a class="nav-link collapsed" data-bs-toggle="collapse" href="#eventsSubMenu" role="button" aria-expanded="false" aria-controls="eventsSubMenu">
                     <span class="icon"><i class="fa-regular fa-calendar"></i></span>
                     <span class="title">Events</span>
-                    <i class="fa-solid fa-chevron-down float-end"></i>
+                    <i class="fa-solid fa-chevron-down  "></i>
                 </a>
                 <div class="collapse" id="eventsSubMenu">
                     <ul class="nav flex-column ms-3">
