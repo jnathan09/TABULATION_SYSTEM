@@ -37,38 +37,42 @@
       <ul>
           <li><a href="#"><i class="fas fa-search"></i></a></li>
           <li><a href="#"><i class="fas fa-bell"></i></a></li>
-          <li><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#logoutModal"><i class="fas fa-user"></i></a></li>
+          <li><a href="#" class="nav-link"  id="profile-float-trigger"><i class="fas fa-user"></i></a></li>
       </ul>
   </div>
 </div>
 
+ 
+ 
+ 
+
   <!-- Logout Modal with Light Theme -->
-<div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+<div class="profile-info-floating" id="profile-info-float">
    <div class="modal-dialog modal-dialog-centered">
-     <div class="modal-content bg-light text-dark border border-white shadow-sm">
+     <div class="modal-content   text-dark border border-secondary shadow-sm rounded">
  
        <!-- Modal Header -->
-       <div class="modal-header border-bottom">
-         <h4 class="modal-title text-light" id="logoutModalLabel">Profile Info</h4>
-         <button type="button" class="btn-close white-close" data-bs-dismiss="modal" aria-label="Close"></button>
+       <div class="modal-header border-bottom py-1 bg-secondary">
+         <h6 class="modal-title text-light bg-secondary ms-2" id="logoutModalLabel">Profile Info</h6>
+         <button type="button" class="btn-close white-close me-3" data-bs-dismiss="modal" aria-label="Close"></button>
        </div>
  
        <!-- Modal Body with Profile Info -->
-       <div class="modal-body text-center">
-         <div class="mb-3">
-           <i class="fas fa-user-circle fa-3x text-light"></i>
+       <div class="modal-body text-center py-4 ">
+         <div class="mb-0">
+           <i class="fas fa-user-circle fa-5x text-light "></i>
          </div>
-         <h4 class="mb-0 text-light">Jonathan</h4> <!-- Replace with dynamic name -->
+         <h3 class="mb-30 text-secondary py-2">Jonathan</h3> <!-- Replace with dynamic name -->
          <small class="text-secondary">jonathan@gmail.com</small> <!-- Replace with email -->
          <hr>
          <p class="text-light">This is Who We Are</p>
        </div>
  
        <!-- Modal Footer -->
-       <div class="modal-footer border-top">
-         <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+       <div class="modal-footer border-top  justify-content-center py-3">
+         <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
          <form action="/logout" method="POST">
-           <button type="submit" class="btn btn-danger">Logout</button>
+           <button type="submit" class="btn btn-secondary btn-sm ms-2">Logout</button>
          </form>
        </div>
  
@@ -76,7 +80,21 @@
    </div>
  </div>
 
+ <script>
+   const profileTrigger = document.getElementById('profile-float-trigger');
+   const profileInfoFloat = document.getElementById('profile-info-float');
  
+   profileTrigger.addEventListener('click', () => {
+     profileInfoFloat.style.display = profileInfoFloat.style.display === 'none' ? 'block' : 'none';
+   });
+ 
+   // Optional: Close when clicking outside
+   document.addEventListener('click', (event) => {
+     if (!profileInfoFloat.contains(event.target) && event.target !== profileTrigger) {
+       profileInfoFloat.style.display = 'none';
+     }
+   });
+ </script>
  
  
   

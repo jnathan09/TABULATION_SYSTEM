@@ -66,8 +66,16 @@
   filter: brightness(0) invert(1); /* Makes the icon white */
 }
 
-/* Dim the background slightly, but keep it visible */
-.modal-backdrop {
-  background-color: rgba(0, 0, 0, 0.3); /* Adjust opacity for dim effect */
+.profile-info-floating {
+  position: absolute;
+  height: 350px;
+  width: 350px;
+  top: 80px; /* Adjust as needed */
+  right: 30px; /* Adjust as needed */
+  border-radius: 5px;
+   
 }
 
+.profile-info-float{
+  height: 550px;
+}
