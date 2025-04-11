@@ -107,36 +107,63 @@
                 </a>
                 <!-- Events with nested menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-toggle="collapse" href="#eventsSubMenu" role="button" aria-expanded="false" aria-controls="eventsSubMenu">
-                    <span class="icon"><i class="fa-regular fa-calendar"></i></span>
-                    <span class="title">Events</span>
-                    <i class="fa-solid fa-chevron-down  "></i>
+    <a class="nav-link collapsed"
+       data-bs-toggle="collapse"
+       href="#eventsSubMenu"
+       role="button"
+       aria-expanded="false"
+       aria-controls="eventsSubMenu"
+       id="eventsMenuLink">
+        <span class="icon"><i class="fa-regular fa-calendar"></i></span>
+        <span class="title">Events</span>
+        <i class="fa-solid fa-chevron-down"></i>
+    </a>
+    <div class="collapse" id="eventsSubMenu">
+        <ul class="nav flex-column ms-0">
+            <li class="nav-item">
+                <a class="nav-link active" href="Criteria.html">
+                    <span class="icon"><i class="fa-solid fa-file-circle-check"></i></span>
+                    <span class="title">Criteria</span>
                 </a>
-                <div class="collapse" id="eventsSubMenu">
-                    <ul class="nav flex-column ms-3">
-                        
-                        <li class="nav-item">
-                            <a class="nav-link active" href="Criteria.html">
-                                <span class="icon"><i class="fa-solid fa-file-circle-check"></i></span>
-                                <span class="title">Criteria</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Judge.html">
-                                <span class="icon"><i class="fa-solid fa-gavel"></i></span>
-                                <span class="title">Judge</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Contestant.html">
-                                <span class="icon"><i class="fa-solid fa-users"></i></span>
-                                <span class="title">Contestant</span>
-                            </a>     
-                        </li>
-                        
-                    </ul>
-                </div>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Judge.html">
+                    <span class="icon"><i class="fa-solid fa-gavel"></i></span>
+                    <span class="title">Judge</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Contestant.html">
+                    <span class="icon"><i class="fa-solid fa-users"></i></span>
+                    <span class="title">Contestant</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</li>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const eventsMenuLink = document.getElementById('eventsMenuLink');
+        const eventsSubMenu = document.getElementById('eventsSubMenu');
+        const isEventsOpen = localStorage.getItem('eventsMenuOpen');
+
+        // Set initial state based on localStorage
+        if (isEventsOpen === 'true') {
+            eventsSubMenu.classList.add('show');
+            eventsMenuLink.setAttribute('aria-expanded', 'true');
+        } else {
+            eventsSubMenu.classList.remove('show');
+            eventsMenuLink.setAttribute('aria-expanded', 'false');
+        }
+
+        // Save state to localStorage when the collapse changes
+        eventsMenuLink.addEventListener('click', function() {
+            const isCurrentlyOpen = eventsSubMenu.classList.contains('show');
+            localStorage.setItem('eventsMenuOpen', !isCurrentlyOpen);
+        });
+    });
+</script>
 
             
             <li class="nav-item">
