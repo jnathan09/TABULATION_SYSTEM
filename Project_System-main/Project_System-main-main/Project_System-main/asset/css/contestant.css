@@ -61,6 +61,7 @@
   top: 80px; /* Adjust as needed */
   right: 30px; /* Adjust as needed */
   border-radius: 5px;
+  display: none;
    
 }
 
