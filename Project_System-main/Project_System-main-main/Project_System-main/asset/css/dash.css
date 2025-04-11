@@ -61,3 +61,13 @@
   transition: all 1s ease;
 }
 
+/*fas fa-user*/
+.btn-close.white-close {
+  filter: brightness(0) invert(1); /* Makes the icon white */
+}
+
+/* Dim the background slightly, but keep it visible */
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.3); /* Adjust opacity for dim effect */
+}
+
